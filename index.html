@@ -63,11 +63,15 @@ input,textarea{background:#fff}footer{border-top:1px solid var(--line)}header{bo
 .hero{display:block;min-height:0;padding:0;background:#050B1F}
 .hv{position:relative;inset:auto;display:block;width:100%;height:auto;aspect-ratio:16/9;object-position:center}
 .ov{display:none!important}.hero>.wrap,.hero .wrap{position:relative;padding-top:32px;padding-bottom:44px}}
+/* circuit hero: video band on top at all widths so text never covers the centered logo */
+.hero{display:block;min-height:0;padding:0;background:#050B1F}
+.hv{position:relative;inset:auto;display:block;width:100%;height:auto;max-height:78vh;aspect-ratio:16/9;object-fit:cover;object-position:center}
+.ov{display:none!important}.hero>.wrap,.hero .wrap{position:relative;padding-top:40px;padding-bottom:56px}
 </style></head><body>
 <header><div class="wrap"><a href="#top"><img src="polaroy_logo_tight.png" alt="Polaroy Technologies"></a>
 <nav><a href="#services">Services</a><a href="#hardware">Hardware</a><a class="btn" href="#contact">Contact</a></nav></div></header>
 <main id="top">
-<section class="hero"><video class="hv" autoplay muted loop playsinline preload="auto" poster="media/hero_electron.jpg" aria-hidden="true"><source src="media/hero_electron.mp4" type="video/mp4"></video><div class="ov"></div>
+<section class="hero"><video class="hv" autoplay muted playsinline preload="auto" poster="media/hero_combined.jpg" aria-hidden="true"><source src="media/hero_combined.mp4" type="video/mp4"></video><div class="ov"></div>
 <div class="wrap hc">
 <div class="pill">LAUNCHING BY END OF 2026</div>
 <h1>High-end GPU compute, <span>built and run in Maine.</span></h1>
@@ -113,5 +117,5 @@ input,textarea{background:#fff}footer{border-top:1px solid var(--line)}header{bo
 <footer><div class="wrap"><img src="polaroy_logo_tight.png" alt="Polaroy Technologies"><p>© 2026 Polaroy Technologies LLC · Maine · <a href="mailto:info@polaroytech.com">info@polaroytech.com</a></p></div></footer>
 <script>document.getElementById('cf').addEventListener('submit',function(ev){ev.preventDefault();var n=document.getElementById('n').value,e=document.getElementById('e').value,m=document.getElementById('m').value;
 location.href='mailto:info@polaroytech.com?subject='+encodeURIComponent('Website inquiry from '+n)+'&body='+encodeURIComponent(m+'\n\n'+n+' ('+e+')');});</script>
-<script>(function(){var v=document.querySelector('.hv');if(!v)return;v.muted=true;v.setAttribute('muted','');function go(){var p=v.play();if(p&&p.catch)p.catch(function(){});}function arm(){['touchstart','click','scroll'].forEach(function(e){window.addEventListener(e,function f(){go();window.removeEventListener(e,f);},{passive:true});});}var p=v.play&&v.play();if(p&&p.catch)p.catch(arm);else if(!p)arm();})();</script>
+<script>(function(){var v=document.querySelector('.hv');if(!v)return;v.muted=true;v.setAttribute('muted','');function go(){var p=v.play();if(p&&p.catch)p.catch(function(){});}function arm(){['touchstart','click','scroll'].forEach(function(e){window.addEventListener(e,function f(){go();window.removeEventListener(e,f);},{passive:true});});}v.loop=false;v.removeAttribute('loop');v.addEventListener('ended',function(){try{v.pause();if(v.duration)v.currentTime=v.duration-0.001;}catch(e){}});var p=v.play&&v.play();if(p&&p.catch)p.catch(arm);else if(!p)arm();})();</script>
 </body></html>
