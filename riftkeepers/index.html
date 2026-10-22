@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#07090e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Riftkeepers</title>
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="./favicon-64.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <script type="module" crossorigin src="./assets/index-B2jw4e_A.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CDK5Z-lR.css">
+</head>
+<body>
+<div id="app"></div>
+<canvas id="ov"></canvas>
+<div id="hud" class="hidden">
+  <div id="top">
+    <div class="tl"><img class="badge" src="./emblem-256.png" alt="Riftkeepers"><button id="menuBtn">Menu</button><span id="clock" class="stat">0:00</span><span id="raceTag" class="stat tag"></span><button id="muteBtn" title="Sound">🔊</button><span id="fps" class="stat"></span></div>
+    <div class="res"><span class="stat cr" title="Rift crystals">◆ <b id="cr">0</b></span><span class="stat fx" title="Flux">⬢ <b id="fx">0</b></span><span class="stat sp" title="Supply">⚑ <b id="sp">0/0</b></span></div>
+  </div>
+  <div id="touchbar"><button id="tBase">Base</button><button id="tProd">Prod</button><button id="tIdle">Idle</button><button id="tArmy">Army</button><button id="tAtk">⚔ A-Move</button><button id="tBox">Box</button><div class="tgs"><button class="tg" data-g="1">1</button><button class="tg" data-g="2">2</button><button class="tg" data-g="3">3</button><button class="tg" data-g="4">4</button></div></div>
+  <div id="bottom">
+    <div id="mmWrap"><canvas id="mm" width="192" height="192"></canvas></div>
+    <div id="sel"></div>
+    <div id="card"></div>
+  </div>
+</div>
+<div id="toast"></div>
+<div id="title" class="overlay"><div class="card wide">
+  <img class="emblem big" src="./emblem.png" alt="Riftkeepers emblem"><h1>Riftkeepers</h1><h2>Ironhold · Shardborn · Skarn</h2>
+  <p>Three races. Three dimensions. One rift. Choose your race, build your base, open your Rift Gate, and destroy every enemy structure.</p>
+  <div class="races">
+    <button class="race" data-r="sky" style="--c:#9fe0ff"><img src="./races/sky.jpg" alt=""><b>Shardborn</b><small>Crystal · Stormfront: +40% speed</small></button>
+    <button class="race on" data-r="deep" style="--c:#4ab0ff"><img src="./races/deep.jpg" alt=""><b>Ironhold</b><small>Mech · Forge Core: -25% damage taken</small></button>
+    <button class="race" data-r="tide" style="--c:#c070ff"><img src="./races/tide.jpg" alt=""><b>Skarn</b><small>Swarm · Hive Hollow: +5 HP/s</small></button>
+  </div>
+  <label class="opp">Opponent <select id="enemy"><option value="random">Random</option><option value="sky">Shardborn</option><option value="deep">Ironhold</option><option value="tide">Skarn</option></select></label>
+  <button id="startBtn" class="primary">Open the Rift</button>
+  <p class="small help-touch">Touch: tap to select, tap the ground to command, drag to pan, pinch to zoom. Hold a 1–4 button to save a group. ⚔ arms attack-move.</p>
+  <p class="small help-desk">Desktop: drag to box-select, right-click to command, A attack-move, Ctrl+1-9 groups, arrows/edge to pan, wheel to zoom.</p>
+</div></div>
+<div id="menu" class="overlay hidden"><div class="card"><img class="emblem" src="./emblem.png" alt=""><h1>Paused</h1>
+  <div class="col"><button id="resume" class="primary">Resume</button><button id="spd">Game speed: 1x</button>
+  <div class="row"><button id="mute2">Sound: on</button><button id="music">Music: on</button></div>
+  <label class="opp">Volume <input id="vol" type="range" min="0" max="1" step="0.05"></label>
+  <label class="opp">Graphics <select id="qual"><option value="low">Low (fast)</option><option value="med">Medium</option><option value="high">High</option></select></label>
+  <div class="row"><button id="restart">Restart</button><button id="toTitle">Change race</button></div></div>
+  <ul class="help"><li><b>Workers</b> gather crystals and flux and build structures (B).</li><li>Production building trains units; Tech unlocks heavy units and the <b>Rift Gate</b>.</li><li><b>Rift Gate</b> opens your home dimension: Sky move faster, Deep take less damage, Tide regenerate.</li><li>Burrowed or submerged units are invisible until an enemy is within 3.5, or a base/tech building is near.</li><li>Win by destroying every enemy structure.</li></ul>
+</div></div>
+<div id="end" class="overlay hidden"><div class="card"><img class="emblem big" src="./emblem.png" alt=""><h1 id="endTitle"></h1><p id="endText"></p><button id="again" class="primary">Play again</button></div></div>
+</body>
+</html>
