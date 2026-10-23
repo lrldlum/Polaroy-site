@@ -5,31 +5,28 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="theme-color" content="#07090e">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Riftkeepers</title>
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="./favicon-64.png">
-<link rel="apple-touch-icon" href="./apple-touch-icon.png">
-  <script type="module" crossorigin src="./assets/index-BgR8uajy.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-q_RCxU1a.css">
+<link rel="icon" href="data:,"><title>Riftkeepers</title>
+  <script type="module" crossorigin src="./assets/index-CFA8bS22.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-y3c3lOz8.css">
 </head>
 <body>
 <div id="app"></div>
 <canvas id="ov"></canvas>
 <div id="hud" class="hidden">
   <div id="top">
-    <div class="tl"><img class="badge" src="./emblem-256.png" alt="Riftkeepers"><button id="menuBtn">Menu</button><span id="clock" class="stat">0:00</span><span id="raceTag" class="stat tag"></span><button id="muteBtn" title="Sound">🔊</button><span id="fps" class="stat"></span></div>
-    <div class="res"><span class="stat cr" title="Rift crystals">◆ <b id="cr">0</b></span><span class="stat fx" title="Flux">⬢ <b id="fx">0</b></span><span class="stat sp" title="Supply">⚑ <b id="sp">0/0</b></span></div>
+    <div class="tl"><button id="menuBtn">Menu</button><span id="clock" class="stat">0:00</span><span id="raceTag" class="stat tag"></span><button id="chatBtn" title="Chat">💬</button><button id="muteBtn" title="Sound">🔊</button><span id="fps" class="stat"></span></div>
+    <div class="res"><span class="stat cr" title="Rift crystals">◆ <b id="cr">0</b></span><span class="stat fx" title="Flux">⬢ <b id="fx">0</b></span><span class="stat red" title="Red crystals (spend on strikes)">♦ <b id="red">0</b></span><span class="stat sp" title="Supply">⚑ <b id="sp">0/0</b></span></div>
   </div>
   <div id="touchbar"><button id="tBase">Base</button><button id="tProd">Prod</button><button id="tIdle">Idle</button><button id="tArmy">Army</button><button id="tAtk">⚔ A-Move</button><button id="tBox">Box</button><div class="tgs"><button class="tg" data-g="1">1</button><button class="tg" data-g="2">2</button><button class="tg" data-g="3">3</button><button class="tg" data-g="4">4</button></div></div>
   <div id="bottom">
     <div id="mmWrap"><canvas id="mm" width="192" height="192"></canvas></div>
     <div id="sel"></div>
-    <div id="card"></div>
+    <div id="card"></div><div id="hcard" class="hidden"></div><div id="strikeBar"></div><div id="chatLog"></div><input id="chatIn" class="hidden" maxlength="120" placeholder="Chat to all (Enter to send, Esc to cancel)" autocomplete="off">
   </div>
 </div>
 <div id="toast"></div>
 <div id="title" class="overlay"><div class="card wide">
-  <img class="emblem big" src="./emblem.png" alt="Riftkeepers emblem"><h1>Riftkeepers</h1><h2>Ironhold · Shardborn · Skarn</h2>
+  <h1>Riftkeepers</h1><h2>Ironhold · Shardborn · Skarn</h2>
   <p>Three races. Three dimensions. One rift. Choose your race, build your base, open your Rift Gate, and destroy every enemy structure.</p>
   <div class="races">
     <button class="race" data-r="sky" style="--c:#9fe0ff"><img src="./races/sky.jpg" alt=""><b>Shardborn</b><small>Crystal · Stormfront: +40% speed</small></button>
@@ -43,7 +40,7 @@
   <p class="small help-touch">Touch: tap to select, tap the ground to command, drag to pan, pinch to zoom. Hold a 1–4 button to save a group. ⚔ arms attack-move.</p>
   <p class="small help-desk">Desktop: drag to box-select, right-click to command, A attack-move, Ctrl+1-9 groups, arrows/edge to pan, wheel to zoom.</p>
 </div></div>
-<div id="menu" class="overlay hidden"><div class="card"><img class="emblem" src="./emblem.png" alt=""><h1>Paused</h1>
+<div id="menu" class="overlay hidden"><div class="card"><h1>Paused</h1>
   <div class="col"><button id="resume" class="primary">Resume</button><button id="spd">Game speed: 1x</button>
   <div class="row"><button id="mute2">Sound: on</button><button id="music">Music: on</button></div>
   <label class="opp">Volume <input id="vol" type="range" min="0" max="1" step="0.05"></label>
@@ -51,7 +48,7 @@
   <div class="row"><button id="restart">Restart</button><button id="toTitle">Change race</button></div><button id="quitBtn" class="danger">Quit to Main Menu</button></div>
   <ul class="help"><li><b>Workers</b> gather crystals and flux and build structures (B).</li><li>Production building trains units; Tech unlocks heavy units and the <b>Rift Gate</b>.</li><li><b>Rift Gate</b> opens your home dimension: Sky move faster, Deep take less damage, Tide regenerate.</li><li>Burrowed or submerged units are invisible until an enemy is within 3.5, or a base/tech building is near.</li><li>Win by destroying every enemy structure.</li></ul>
 </div></div>
-<div id="end" class="overlay hidden"><div class="card"><img class="emblem big" src="./emblem.png" alt=""><h1 id="endTitle"></h1><p id="endText"></p><button id="again" class="primary">Play again</button></div></div>
+<div id="end" class="overlay hidden"><div class="card"><h1 id="endTitle"></h1><p id="endText"></p><button id="again" class="primary">Play again</button></div></div>
 <div id="desync" class="hidden"></div><div id="mpWait" class="hidden">Waiting for opponent…</div>
 </body>
 </html>
