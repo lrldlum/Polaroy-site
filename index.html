@@ -75,6 +75,19 @@ input,textarea{background:#fff}footer{border-top:1px solid var(--line)}header{bo
 .hero{display:block;min-height:0;padding:0;background:#050B1F}
 .hv{position:relative;inset:auto;display:block;width:100%;height:auto;max-height:78vh;aspect-ratio:16/9;object-fit:cover;object-position:center}
 .ov{display:none!important}.hero>.wrap,.hero .wrap{position:relative;padding-top:40px;padding-bottom:56px}
+
+.live-vast{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:0 20px 50px rgba(0,16,79,.10)}
+.live-vast h3{color:var(--navy);font-size:22px;font-weight:800;margin:0 0 6px}
+.live-meta{color:var(--muted);font-size:14px;margin:0 0 18px}
+.live-price{font-size:36px;line-height:1.1;font-weight:800;color:var(--navy);margin:0 0 6px}
+.live-price a{color:inherit}
+.live-price span{font-size:18px;font-weight:600;color:var(--muted)}
+.live-price-note{color:var(--muted);font-size:14px;margin:0 0 22px}
+.live-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 36px}
+.live-vast .row:first-child{border-top:0}
+.live-link{margin-top:22px}
+.live-link a{font-weight:600}
+@media(max-width:700px){.live-grid{grid-template-columns:1fr}.live-price{font-size:30px}}
 </style></head><body>
 <header><div class="wrap"><a href="#top"><img src="polaroy_logo_tight.png" alt="Polaroy Technologies"></a>
 <nav><a href="#services">Services</a><a href="#hardware">Hardware</a><a class="btn" href="#contact">Contact</a></nav></div></header>
@@ -105,7 +118,30 @@ input,textarea{background:#fff}footer{border-top:1px solid var(--line)}header{bo
 <div class="row"><span>Memory</span><b>64 GB DDR5</b></div>
 <div class="row"><span>Storage</span><b>2 TB PCIe Gen5 NVMe</b></div>
 <div class="row"><span>Marketplace</span><b><a href="https://cloud.vast.ai/create/?machineId=156929&amp;isOfferVerified=false&amp;isOfferAvailable=false" target="_blank" rel="noopener">vast.ai</a></b></div></div>
-</div></div></section>
+</div>
+
+<div class="live-vast" id="live-vast">
+<div class="eyebrow">Live stats</div>
+<h3>Live from vast.ai</h3>
+<p class="live-meta">Machine 156929 · Last updated <time id="vast-updated" datetime="2026-11-11T02:53:28+00:00">Nov 11, 2026, 2:53 AM UTC</time> · Refreshes about every 30 minutes</p>
+<p class="live-price"><a id="vast-price-link" href="https://cloud.vast.ai/create/?machineId=156929&amp;isOfferVerified=false&amp;isOfferAvailable=false" target="_blank" rel="noopener">$0.493<span>/hour</span></a></p>
+<p class="live-price-note">Renter price on vast.ai</p>
+<div class="live-grid">
+<div class="row"><span>Reliability</span><b data-vast="reliability">92.9%</b></div>
+<div class="row"><span>TFLOPS</span><b data-vast="tflops">107.6 TFLOPS</b></div>
+<div class="row"><span>DLPerf</span><b data-vast="dlperf">199.0</b></div>
+<div class="row"><span>GPU</span><b data-vast="gpu">RTX 5090 · 31.8 GB VRAM</b></div>
+<div class="row"><span>CPU</span><b data-vast="cpu">AMD Ryzen 9 9950X3D 16-Core Processor · 32 cores</b></div>
+<div class="row"><span>RAM</span><b data-vast="ram">60.4 GB</b></div>
+<div class="row"><span>Disk</span><b data-vast="disk">1,525.4 GB (XPG MARS 980 PRO)</b></div>
+<div class="row"><span>Internet</span><b data-vast="net">1,439 Mbps up · 1,482 Mbps down</b></div>
+<div class="row"><span>Listing</span><b data-vast="listing">Ends Dec 9, 2026, 2:27 AM UTC · 28 days left</b></div>
+<div class="row"><span>Availability</span><b data-vast="availability">Unavailable</b></div>
+</div>
+<p class="live-link"><a id="vast-listing-link" href="https://cloud.vast.ai/create/?machineId=156929&amp;isOfferVerified=false&amp;isOfferAvailable=false" target="_blank" rel="noopener">View listing on vast.ai</a></p>
+</div>
+<script type="application/json" id="vast-live-fallback">{"machine_id":156929,"listing_url":"https://cloud.vast.ai/create/?machineId=156929&isOfferVerified=false&isOfferAvailable=false","price_per_hour":0.4933333333333333,"reliability":0.9292969,"tflops":107.58143999999999,"dlperf":199.020874517,"gpu_name":"RTX 5090","gpu_ram_mb":32607,"cpu_name":"AMD Ryzen 9 9950X3D 16-Core Processor","cpu_cores":32,"ram_mb":61881,"disk_gb":1525.4,"disk_name":"XPG MARS 980 PRO","inet_up_mbps":1439.0,"inet_down_mbps":1481.9,"listing_end":"2026-12-09T02:27:59+00:00","duration_seconds":2417670.2429151535,"rentable":false,"rented":false,"availability":"Unavailable","last_updated":"2026-11-11T02:53:28+00:00"}</script>
+</div></section>
 
 <section><div class="wrap"><div class="eyebrow">Why Polaroy</div><h2>Small, careful and accountable</h2><p class="sub">We're a new, single-owner business, and we'd rather be straightforward about that.</p>
 <div class="grid grid3">
@@ -126,4 +162,124 @@ input,textarea{background:#fff}footer{border-top:1px solid var(--line)}header{bo
 <script>document.getElementById('cf').addEventListener('submit',function(ev){ev.preventDefault();var n=document.getElementById('n').value,e=document.getElementById('e').value,m=document.getElementById('m').value;
 location.href='mailto:info@polaroytech.com?subject='+encodeURIComponent('Website inquiry from '+n)+'&body='+encodeURIComponent(m+'\n\n'+n+' ('+e+')');});</script>
 <script>(function(){var v=document.querySelector('.hv');if(!v)return;v.muted=true;v.setAttribute('muted','');function go(){var p=v.play();if(p&&p.catch)p.catch(function(){});}function arm(){['touchstart','click','scroll'].forEach(function(e){window.addEventListener(e,function f(){go();window.removeEventListener(e,f);},{passive:true});});}v.loop=false;v.removeAttribute('loop');v.addEventListener('ended',function(){try{v.pause();if(v.duration)v.currentTime=v.duration-0.001;}catch(e){}});var p=v.play&&v.play();if(p&&p.catch)p.catch(arm);else if(!p)arm();})();</script>
+
+<script>
+(function(){
+  var REFRESH_MS = 30 * 60 * 1000;
+  var fallbackEl = document.getElementById('vast-live-fallback');
+  var lastKnown = null;
+  try { lastKnown = fallbackEl ? JSON.parse(fallbackEl.textContent) : null; } catch (e) { lastKnown = null; }
+
+  function num(v){ return v == null || v === '' ? null : Number(v); }
+  function dash(v){ return (v == null || v === '') ? '—' : v; }
+  function fmtPrice(v){ v = num(v); return v == null || isNaN(v) ? '—' : '$' + v.toFixed(3); }
+  function fmtPct(v){ v = num(v); return v == null || isNaN(v) ? '—' : (v * 100).toFixed(1) + '%'; }
+  function fmtTflops(v){ v = num(v); return v == null || isNaN(v) ? '—' : v.toLocaleString(undefined, {maximumFractionDigits: 1, minimumFractionDigits: 1}) + ' TFLOPS'; }
+  function fmtDlperf(v){ v = num(v); return v == null || isNaN(v) ? '—' : v.toLocaleString(undefined, {maximumFractionDigits: 1, minimumFractionDigits: 1}); }
+  function fmtGbFromMb(v){ v = num(v); return v == null || isNaN(v) ? null : (v / 1024).toFixed(1) + ' GB'; }
+  function fmtDisk(gb, name){
+    gb = num(gb);
+    if (gb == null || isNaN(gb)) return '—';
+    var label = gb.toLocaleString(undefined, {maximumFractionDigits: 1, minimumFractionDigits: 1}) + ' GB';
+    return name ? label + ' (' + name + ')' : label;
+  }
+  function fmtNet(up, down){
+    up = num(up); down = num(down);
+    if ((up == null || isNaN(up)) && (down == null || isNaN(down))) return '—';
+    var a = (up == null || isNaN(up)) ? '—' : Math.round(up).toLocaleString() + ' Mbps up';
+    var b = (down == null || isNaN(down)) ? '—' : Math.round(down).toLocaleString() + ' Mbps down';
+    return a + ' · ' + b;
+  }
+  function parseIso(iso){
+    if (!iso) return null;
+    var d = new Date(iso);
+    return isNaN(d.getTime()) ? null : d;
+  }
+  function fmtUtc(iso){
+    var d = parseIso(iso);
+    if (!d) return '—';
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var h = d.getUTCHours();
+    var ampm = h >= 12 ? 'PM' : 'AM';
+    h = h % 12; if (h === 0) h = 12;
+    var min = String(d.getUTCMinutes()).padStart(2, '0');
+    return months[d.getUTCMonth()] + ' ' + d.getUTCDate() + ', ' + d.getUTCFullYear() + ', ' + h + ':' + min + ' ' + ampm + ' UTC';
+  }
+  function fmtListing(end, duration){
+    var parts = [];
+    if (end) parts.push('Ends ' + fmtUtc(end));
+    duration = num(duration);
+    if (duration != null && !isNaN(duration)) {
+      if (duration >= 86400) parts.push(Math.round(duration / 86400) + ' days left');
+      else parts.push(Math.round(duration / 3600) + ' hours left');
+    }
+    return parts.length ? parts.join(' · ') : '—';
+  }
+  function setText(sel, value){
+    var el = document.querySelector(sel);
+    if (el) el.textContent = dash(value);
+  }
+  function setHref(id, href){
+    var el = document.getElementById(id);
+    if (el && href) el.setAttribute('href', href);
+  }
+  function render(data){
+    if (!data) return;
+    lastKnown = data;
+    var priceEl = document.querySelector('#vast-price-link');
+    if (priceEl) {
+      priceEl.innerHTML = fmtPrice(data.price_per_hour) + '<span>/hour</span>';
+      if (data.listing_url) priceEl.setAttribute('href', data.listing_url);
+    }
+    var updated = document.getElementById('vast-updated');
+    if (updated) {
+      updated.textContent = fmtUtc(data.last_updated);
+      if (data.last_updated) updated.setAttribute('datetime', data.last_updated);
+    }
+    setText('[data-vast="reliability"]', fmtPct(data.reliability));
+    setText('[data-vast="tflops"]', fmtTflops(data.tflops));
+    setText('[data-vast="dlperf"]', fmtDlperf(data.dlperf));
+    var gpu = data.gpu_name || '';
+    var vram = fmtGbFromMb(data.gpu_ram_mb);
+    setText('[data-vast="gpu"]', gpu && vram ? gpu + ' · ' + vram + ' VRAM' : (gpu || (vram ? vram + ' VRAM' : '—')));
+    var cpu = data.cpu_name || '';
+    if (cpu && data.cpu_cores != null) cpu += ' · ' + data.cpu_cores + ' cores';
+    setText('[data-vast="cpu"]', cpu || '—');
+    setText('[data-vast="ram"]', fmtGbFromMb(data.ram_mb) || '—');
+    setText('[data-vast="disk"]', fmtDisk(data.disk_gb, data.disk_name));
+    setText('[data-vast="net"]', fmtNet(data.inet_up_mbps, data.inet_down_mbps));
+    setText('[data-vast="listing"]', fmtListing(data.listing_end, data.duration_seconds));
+    setText('[data-vast="availability"]', data.availability || '—');
+    setHref('vast-listing-link', data.listing_url);
+  }
+  function merge(base, incoming){
+    var out = {};
+    var src = base || {};
+    var next = incoming || {};
+    var keys = Object.keys(src).concat(Object.keys(next));
+    for (var i = 0; i < keys.length; i++) {
+      var k = keys[i];
+      if (out.hasOwnProperty(k)) continue;
+      var v = next[k];
+      out[k] = (v === undefined || v === null || v === '') ? src[k] : v;
+    }
+    return out;
+  }
+  function load(){
+    var url = 'vast-live.json?t=' + Date.now();
+    return fetch(url, {cache: 'no-store'}).then(function(res){
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    }).then(function(data){
+      render(merge(lastKnown, data));
+    }).catch(function(){
+      if (lastKnown) render(lastKnown);
+    });
+  }
+  render(lastKnown);
+  load();
+  setInterval(load, REFRESH_MS);
+})();
+</script>
+
 </body></html>
