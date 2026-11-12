@@ -88,9 +88,30 @@ input,textarea{background:#fff}footer{border-top:1px solid var(--line)}header{bo
 .live-link{margin-top:22px}
 .live-link a{font-weight:600}
 @media(max-width:700px){.live-grid{grid-template-columns:1fr}.live-price{font-size:30px}}
+
+.usecase{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.usecase img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:#0b1226}
+.usecase .body{padding:22px 24px 26px}
+.usecase h3{margin:10px 0 8px}
+.example-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:var(--blue)}
+.howto-note{color:var(--muted);max-width:760px;margin:0 0 32px}
+.howto-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.howto-path{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow)}
+.howto-path h3{color:var(--navy);font-size:18px;margin:0 0 14px}
+.howto-path ol{margin:0;padding-left:22px;color:var(--muted)}
+.howto-path li{margin:0 0 12px;padding-left:6px}
+.howto-path a{font-weight:600}
+code{font-family:ui-monospace,SFMono-Regular,"IBM Plex Mono",Menlo,Consolas,monospace;font-size:.9em;background:rgba(0,16,79,.06);border-radius:4px;padding:0 4px;word-break:break-word}
+.prompt{background:var(--alt);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-family:ui-monospace,SFMono-Regular,"IBM Plex Mono",Menlo,Consolas,monospace;font-size:13.5px;line-height:1.55;color:var(--text);white-space:pre-wrap;overflow:auto;margin:12px 0 0}
+.howto-docs{margin-top:28px;color:var(--muted);font-size:14px}
+.howto-docs a{font-weight:600}
+@media(max-width:1100px){nav a{margin-left:18px}}
+@media(max-width:900px){.howto-grid{grid-template-columns:1fr}}
+section[id]{scroll-margin-top:96px}
+@media(max-width:760px){section[id]{scroll-margin-top:80px}}
 </style></head><body>
 <header><div class="wrap"><a href="#top"><img src="polaroy_logo_tight.png" alt="Polaroy Technologies"></a>
-<nav><a href="#services">Services</a><a href="#hardware">Hardware</a><a class="btn" href="#contact">Contact</a></nav></div></header>
+<nav><a href="#services">Services</a><a href="#use-cases">Use cases</a><a href="#hardware">Hardware</a><a href="#how-to-rent">How to rent</a><a class="btn" href="#contact">Contact</a></nav></div></header>
 <main id="top">
 <section class="hero"><video class="hv" autoplay muted playsinline preload="auto" poster="media/hero_combined.jpg" aria-hidden="true"><source src="media/hero_combined.mp4" type="video/mp4"></video><div class="ov"></div>
 <div class="wrap hc">
@@ -102,10 +123,19 @@ input,textarea{background:#fff}footer{border-top:1px solid var(--line)}header{bo
 <section id="services"><div class="wrap"><div class="eyebrow">Services</div><h2>What we offer</h2>
 <p class="sub">Dedicated, current-generation GPU hardware for people who need serious compute without buying it themselves.</p>
 <div class="grid">
-<div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h4v4H7zM15 10h2M15 14h2"/></svg></div><h3>GPU compute rental</h3><p>Access to a high-end NVIDIA RTX 5090 workstation for demanding workloads.</p></div>
-<div class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3"/></svg></div><h3>AI &amp; ML workloads</h3><p>Suited to model training, fine-tuning and inference.</p></div>
-<div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></div><h3>Rendering</h3><p>GPU horsepower for 3D rendering and similar compute-heavy jobs.</p></div>
-<div class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Flexible hourly rentals</h3><p>Rent by the hour through the <a href="https://cloud.vast.ai/create/?machineId=156929&amp;isOfferVerified=false&amp;isOfferAvailable=false" target="_blank" rel="noopener">vast.ai</a> marketplace. No long-term contracts.</p></div>
+<div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="0.5"/><path d="M9 3v2M12 3v2M15 3v2M9 19v2M12 19v2M15 19v2M3 9h2M3 12h2M3 15h2M19 9h2M19 12h2M19 15h2"/></svg></div><h3>GPU compute rental</h3><p>Access to a high-end NVIDIA RTX 5090 workstation for demanding workloads.</p></div>
+<div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="12" r="2.1"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M7.5 7.5l2.8 2.8M16.5 7.5l-2.8 2.8M10.3 13.7L7.6 16.4M13.7 13.7l2.7 2.7M6 8.2v7.6M18 8.2v7.6"/></svg></div><h3>AI &amp; ML workloads</h3><p>Suited to model training, fine-tuning and inference.</p></div>
+<div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div><h3>Rendering</h3><p>GPU horsepower for 3D rendering and similar compute-heavy jobs.</p></div>
+<div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/><path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21"/></svg></div><h3>Flexible hourly rentals</h3><p>Rent by the hour through the <a href="https://cloud.vast.ai/create/?machineId=156929&amp;isOfferVerified=false&amp;isOfferAvailable=false" target="_blank" rel="noopener">vast.ai</a> marketplace. No long-term contracts.</p></div>
+</div></div></section>
+
+
+<section id="use-cases"><div class="wrap"><div class="eyebrow">Example workloads</div><h2>Use cases</h2>
+<p class="sub">These images are examples of the kinds of work you can run on an RTX 5090. They are not customer projects, testimonials or benchmarks.</p>
+<div class="grid grid3">
+<div class="card usecase"><img src="media/usecase-rendering.jpg" alt="Example 3D render of the aurora over a frozen lake, illustrating a graphics workload" width="1280" height="720"><div class="body"><div class="example-label">Example workload</div><h3>Graphics &amp; rendering</h3><p>A cinematic 3D scene of the kind you might create or render on an RTX 5090.</p></div></div>
+<div class="card usecase"><img src="media/usecase-chat.jpg" alt="Example local open-model chat interface answering a prompt, illustrating an LLM inference workload" width="1280" height="720"><div class="body"><div class="example-label">Example workload</div><h3>LLM &amp; AI inference</h3><p>A local open-weight model answering a prompt in a chat interface, the sort of inference job you can run on this GPU.</p></div></div>
+<div class="card usecase"><img src="media/usecase-dev.jpg" alt="Example code editor and terminal running a PyTorch job and nvidia-smi on an RTX 5090, illustrating a development workload" width="1280" height="720"><div class="body"><div class="example-label">Example workload</div><h3>Development</h3><p>A code editor and terminal running a CUDA/PyTorch job, with nvidia-smi showing the RTX 5090.</p></div></div>
 </div></div></section>
 
 <section id="hardware" class="alt"><div class="wrap"><div class="eyebrow">Hardware</div>
@@ -141,6 +171,42 @@ input,textarea{background:#fff}footer{border-top:1px solid var(--line)}header{bo
 <p class="live-link"><a id="vast-listing-link" href="https://cloud.vast.ai/create/?machineId=156929&amp;isOfferVerified=false&amp;isOfferAvailable=false" target="_blank" rel="noopener">View listing on vast.ai</a></p>
 </div>
 <script type="application/json" id="vast-live-fallback">{"machine_id":156929,"listing_url":"https://cloud.vast.ai/create/?machineId=156929&isOfferVerified=false&isOfferAvailable=false","price_per_hour":0.4933333333333333,"reliability":0.9292969,"tflops":107.58143999999999,"dlperf":199.020874517,"gpu_name":"RTX 5090","gpu_ram_mb":32607,"cpu_name":"AMD Ryzen 9 9950X3D 16-Core Processor","cpu_cores":32,"ram_mb":61881,"disk_gb":1525.4,"disk_name":"XPG MARS 980 PRO","inet_up_mbps":1439.0,"inet_down_mbps":1481.9,"listing_end":"2026-12-09T02:27:59+00:00","duration_seconds":2417670.2429151535,"rentable":false,"rented":false,"availability":"Currently rented","last_updated":"2026-11-11T02:53:28+00:00"}</script>
+</div></section>
+
+
+<section id="how-to-rent"><div class="wrap">
+<div class="eyebrow">How to rent</div>
+<h2>How to rent our GPU</h2>
+<p class="howto-note">Our RTX 5090 is listed on the <a href="https://cloud.vast.ai/create/?machineId=156929" target="_blank" rel="noopener">vast.ai marketplace as machine 156929</a>. It may already be rented, so availability is not guaranteed. The steps below follow vast.ai’s published documentation.</p>
+<div class="howto-grid">
+<div class="howto-path">
+<h3>On the vast.ai website</h3>
+<ol>
+<li>Create an account at <a href="https://cloud.vast.ai/" target="_blank" rel="noopener">vast.ai</a> and verify your email. You need a verified email before you can rent.</li>
+<li>Go to Billing, choose Add Credit, and add funds with a credit card, BitPay, or Crypto.com. Your balance appears at the top right of the dashboard. See the <a href="https://docs.vast.ai/guides/get-started/quickstart" target="_blank" rel="noopener">quickstart guide</a>.</li>
+<li>The most reliable way to open this machine is the <a href="https://cloud.vast.ai/create/?machineId=156929" target="_blank" rel="noopener">direct listing for machine 156929</a>. You can also go to Search and filter by GPU type (RTX 5090). Vast hides unverified machines from search results by default, so our listing can be easy to miss in a general search.</li>
+<li>Choose a <a href="https://docs.vast.ai/guides/instances/choosing/templates" target="_blank" rel="noopener">template</a> first — for example PyTorch, TensorFlow, an LLM inference image, or base Ubuntu — using Change Template in the upper left. Set the disk size before you rent; it cannot be changed later.</li>
+<li>If the offer is available, click Rent. If you see that the offer is no longer available, the machine is already rented or is otherwise not open to new rentals.</li>
+<li>Wait until the instance is ready (cached images start quickly; a fresh image pull can take longer), then click Open and connect with <a href="https://docs.vast.ai/guides/instances/connect/ssh" target="_blank" rel="noopener">SSH</a> or <a href="https://docs.vast.ai/guides/instances/connect/jupyter" target="_blank" rel="noopener">Jupyter</a>. For SSH, add your public key to your vast.ai account first. For Jupyter, vast.ai recommends installing its TLS certificate for a secure browser connection.</li>
+</ol>
+</div>
+<div class="howto-path">
+<h3>With an AI assistant</h3>
+<ol>
+<li>If you use a coding assistant that can run commands (for example ChatGPT, Grok, Cursor, or a similar agent), it can drive the official <a href="https://docs.vast.ai/cli/hello-world" target="_blank" rel="noopener">vastai CLI</a> for you. On Linux, macOS, or WSL install it with <code>curl -fsSL https://vast.ai/install.sh | bash</code>. On Windows, use <code>pip install vastai</code>.</li>
+<li>Vast also publishes an <a href="https://docs.vast.ai/guides/get-started/agents" target="_blank" rel="noopener">agent skill</a> that wraps this CLI. If your tool supports the skills.sh framework (Claude Code, Cursor, GitHub Copilot, Windsurf, Cline, and others), install it with <code>npx skills add vast-ai/vast-cli --skill vastai</code>, then restart the tool.</li>
+<li>Create an API key on vast.ai’s Keys page. Default keys have full access to your account, including billing. For an assistant, <a href="https://docs.vast.ai/guides/reference/api-keys" target="_blank" rel="noopener">create a scoped key</a> with only the permissions it needs, treat it like a password, and revoke it when you are done. Save it locally with <code>vastai set api-key YOUR_API_KEY</code>. Do not commit the key to a repository, and do not paste a full-access key into a prompt you do not trust.</li>
+<li>Ask the assistant to look up machine 156929 and rent it only if it is available. By default, the CLI only shows verified, currently rentable machines, so the search should turn those filters off with <code>-n</code>. You can paste a prompt like this:</li>
+</ol>
+<pre class="prompt">I want to rent Polaroy Technologies’ RTX 5090 on vast.ai, if it is available. The machine ID is 156929.
+
+Use the vastai CLI. First run:
+vastai search offers 'machine_id=156929' -n
+
+The -n flag turns off default filters that can hide this listing. If an offer appears, show me the price and whether it is rentable, then wait for my approval before creating an instance. Do not create, start, stop, or destroy anything until I confirm. If I approve, use a PyTorch or Jupyter-friendly image and tell me how to connect with SSH or Jupyter.</pre>
+</div>
+</div>
+<p class="howto-docs">Official vast.ai docs used for these steps: <a href="https://docs.vast.ai/guides/get-started/quickstart" target="_blank" rel="noopener">Quickstart</a>, <a href="https://docs.vast.ai/guides/instances/choosing/find-and-rent" target="_blank" rel="noopener">Finding &amp; renting instances</a>, <a href="https://docs.vast.ai/guides/instances/choosing/templates" target="_blank" rel="noopener">Templates</a>, <a href="https://docs.vast.ai/guides/instances/connect/ssh" target="_blank" rel="noopener">SSH</a>, <a href="https://docs.vast.ai/guides/instances/connect/jupyter" target="_blank" rel="noopener">Jupyter</a>, <a href="https://docs.vast.ai/cli/hello-world" target="_blank" rel="noopener">CLI hello world</a>, <a href="https://docs.vast.ai/cli/reference/search-offers" target="_blank" rel="noopener">search offers</a>, <a href="https://docs.vast.ai/guides/get-started/agents" target="_blank" rel="noopener">Using Vast.ai with Agents</a>, and <a href="https://docs.vast.ai/guides/reference/api-keys" target="_blank" rel="noopener">API keys</a>.</p>
 </div></section>
 
 <section><div class="wrap"><div class="eyebrow">Why Polaroy</div><h2>Small, careful and accountable</h2><p class="sub">We're a new, single-owner business, and we'd rather be straightforward about that.</p>
