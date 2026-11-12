@@ -90,11 +90,10 @@ def pick_offer(offers: list) -> dict:
 
 
 def availability(offer: dict) -> str:
-    if offer.get("rented") is True:
-        return "Rented"
     if offer.get("rentable") is True:
         return "Available"
-    return "Unavailable"
+    # Listed but not rentable means a renter currently holds the GPU.
+    return "Currently rented"
 
 
 def from_unix(value) -> str | None:
