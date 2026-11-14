@@ -2,9 +2,9 @@
   "machine_id": 156929,
   "listing_url": "https://cloud.vast.ai/create/?machineId=156929&isOfferVerified=false&isOfferAvailable=false",
   "price_per_hour": 0.7599999999999999,
-  "reliability": 0.9698701,
+  "reliability": 0.9712802,
   "tflops": 107.58143999999999,
-  "dlperf": 199.020853167,
+  "dlperf": 199.020066286,
   "gpu_name": "RTX 5090",
   "gpu_ram_mb": 32607,
   "cpu_name": "AMD Ryzen 9 9950X3D 16-Core Processor",
@@ -12,12 +12,12 @@
   "ram_mb": 61881,
   "disk_gb": 1525.4,
   "disk_name": "XPG MARS 980 PRO",
-  "inet_up_mbps": 1744.2,
-  "inet_down_mbps": 1783.3,
+  "inet_up_mbps": 1768.5,
+  "inet_down_mbps": 1831.4,
   "listing_end": "2026-12-09T02:27:59+00:00",
-  "duration_seconds": 2167936.727661133,
+  "duration_seconds": 2143984.6233341694,
   "rentable": false,
   "rented": false,
   "availability": "Currently rented",
-  "last_updated": "2026-11-14T00:15:42+00:00"
+  "last_updated": "2026-11-14T06:54:54+00:00"
 }
