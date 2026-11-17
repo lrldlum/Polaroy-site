@@ -2,9 +2,9 @@
   "machine_id": 156929,
   "listing_url": "https://cloud.vast.ai/create/?machineId=156929&isOfferVerified=false&isOfferAvailable=false",
   "price_per_hour": 0.8266666666666667,
-  "reliability": 0.9804693,
+  "reliability": 0.9811803,
   "tflops": 107.58143999999999,
-  "dlperf": 199.377063189,
+  "dlperf": 199.377498819,
   "gpu_name": "RTX 5090",
   "gpu_ram_mb": 32607,
   "cpu_name": "AMD Ryzen 9 9950X3D 16-Core Processor",
@@ -15,9 +15,9 @@
   "inet_up_mbps": 2063.3,
   "inet_down_mbps": 2115.1,
   "listing_end": "2026-12-09T02:27:59+00:00",
-  "duration_seconds": 1920907.131280899,
+  "duration_seconds": 1896831.8680143356,
   "rentable": false,
   "rented": false,
   "availability": "Currently rented",
-  "last_updated": "2026-11-16T20:52:51+00:00"
+  "last_updated": "2026-11-17T03:34:07+00:00"
 }
